@@ -18,7 +18,7 @@ class Detect(AModule):
         self.meta.update({
             'name': 'MCI detect',
             'version': '1.0.0',
-            'description': 'Detect Memory Card through MCI',
+            'description': 'Detect Memory Card through MCI interface',
             'author': 'Jordan Ovrè / Ghecko <jovre@immunit.ch>, Paul Duncan / Eresse <pduncan@immunit.ch>'
         })
 

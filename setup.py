@@ -10,7 +10,7 @@ __license__ = "Apache 2.0"
 __version__ = "1.0.0"
 __contact__ = "Jordan Ovrè / Ghecko <jovre@immunit.ch>, Paul Duncan / Eresse <pduncan@immunit.ch>"
 
-description = 'Detect Memory Card'
+description = 'Detect Memory Card through MCI interface'
 name = 'owfmodules.mci.detect'
 
 setup(
