@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+
+# Octowire Framework
+# Copyright (c) ImmunIT - Jordan Ovrè / Paul Duncan
+# License: Apache 2.0
+# Paul Duncan / Eresse <pduncan@immunit.ch>
+# Jordan Ovrè / Ghecko <jovre@immunit.ch>
+
 import time
 
 from octowire_framework.module.AModule import AModule
@@ -8,9 +16,9 @@ class Detect(AModule):
     def __init__(self, owf_config):
         super(Detect, self).__init__(owf_config)
         self.meta.update({
-            'name': 'MCI detect interface',
+            'name': 'MCI detect',
             'version': '1.0.0',
-            'description': 'Module to detect and print MCI interface information.',
+            'description': 'Detect Memory Card through MCI',
             'author': 'Jordan Ovrè / Ghecko <jovre@immunit.ch>, Paul Duncan / Eresse <pduncan@immunit.ch>'
         })
 
@@ -39,11 +47,11 @@ class Detect(AModule):
     def run(self, return_value=False):
         """
         Main function.
-        call detect function to try identifying MCI interface.
+        call detect function to try and identify MCI interface.
         :return: Nothing or dictionary if return_value is True.
         """
-        # If detect_octowire is True then Detect and connect to the Octowire hardware. Else, connect to the Octowire
-        # using the parameters that were configured. It sets the self.owf_serial variable if the hardware is found.
+        # If detect_octowire is True then detect and connect to the Octowire hardware. Else, connect to the Octowire
+        # using the parameters that were configured. This sets the self.owf_serial variable if the hardware is found.
         self.connect()
         if not self.owf_serial:
             return
